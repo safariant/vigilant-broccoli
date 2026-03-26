@@ -29,10 +29,12 @@ st.set_page_config(
 @st.cache_resource
 def init_ee():
     credentials = ee.ServiceAccountCredentials(
-        email=st.secrets["geospatial-service-account@ee-evanomondi.iam.gserviceaccount.com"],
-        key_data=st.secrets["-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCxaUfCqhn8a+/9\nZbIq2wYFOELdzNTcuF11P1cmt4nFZ/UuIb8oMPlrY40THgNi16UaPcVw941M6sVa\ntxcLeoCVFWYWDYUok+jqeoV3x+/PdrV8+xTrZ/cQijpmh3/baCpjtt3AR6ENCFOu\nHW2AJenhNPwLVx1R40Q/M1S2wBIu3vH6eJwIbYWvk/ba+TYued144B3khz9sQG+1\nyT88oys+Du8Cb8TNcIEifICv+y89J+pbS2jShiN42MMsYzmTSIu+2ySQPc+sCMS2\njEbhmw1uFHehnEgUyN1WSSmWiqnCNDPDAwQvGFOzWQJ6frC4aZYYrGSbG3dYBxCM\n4USpmwU9AgMBAAECggEADofrf0Jpx3bbHMZQGK+A0jugn8RvqOEW5+FiFNiSmbnL\n51U58COhbON7V2tYEVKirMAOJGm6R+hbdXR/7YpBRDS7pvxrgX5/5M4CkY7YPFti\nPmmIS0cO1urOIWi2wbSfSDSJptPsboIAl0caGWrBjxcaZR65AY8w9KY9KYzDeyrX\nmI304vHPAFN7aMcwkatvo6w+5BGNloJErbiklsHYPriessNKSKxsFGgdcCxfyOVX\nILx4l4PXfnjR81n2UPDqxOuLcduE59DBEoASqLeXLcBB0A1WpT/a9HS1FpntQEX3\nOMpV6Kyot++4wHqWVAZ+wZfUC8nXWteINBTzqCXNcQKBgQDiXa7+ejMoDQZ5Tovc\nFxnGnMqaHkYI7X7fk5hnTLCEFe/UdT3X7ha+1t9xSsvtAcbPLP2lqUCG9P0OPBov\nGg4NVpyLVl4oRn+NwSIBAUlhZGuRvirJdLJhMDmS/vVTlycUypWF3gdWHz8U7+Ml\n6Q6z9eDj4fsmk/L9EX35eHQiWQKBgQDIovQCD+pr53nER00zAcNN/mthV5LKJytp\nzlV0rh7xPgjDm4ryelqjGveDs3igSmFZ+JUf/k4Xk3JBsygsaSEivnSt34orlNy4\nSzaRWaBYF6T13cLGfgMg3DoKHjUwi8Jfa9SXypjSLsJ8CLgyt+pFMeSpUaYlmrYh\nMBdrytb1hQKBgHgiWgXqGo4t43qrqeQjSmWyvn9ug6KnUEcdkKt58tAWyFJL6odX\nbzDW3nzEwldFMxqueOrbWUiGamqMkSTgQgboKWp1asEbMQStM/uukCAk6EXP0+tY\niHa13khaER7MwEvze8kw3VnieVsGONncxxXQ7wph2yVNLY8LIn0sZQ35AoGAcSmX\nvuIDMkEoqNAedrpz0bXCEvE11dcp4U+DW4Ap6581ij5crE7eeEhpelrrmlzZc8mF\nMrpYiWuccfn+mq3hBputa7Q9Vj9sDnY9nNWUXptXa2Vcyl+gnBQamEJZdbweMXu8\nOLEIaOP+xb6VReX9uHFfqzBmKaeNOkLJsv6BJ5ECgYBRM9KC0J8UDQznIqLWk1O7\nUrHxCydsoWFog7puYAS0T8/8IA0EM9ExGVpPonHhPgXXx96/X6O1XIBTrLTb07i8\n7Qy6oifWrSTgx2TRfQpyukts6G7vg3uK4+gHAm3o0+Cq0kwDUGq+yb4HvyXp4VB9\nY2njx4kVvLTIaZOjPuHHrg==\n-----END PRIVATE KEY-----\n"]
+        email=st.secrets["EE_SERVICE_ACCOUNT"],
+        key_data=st.secrets["EE_PRIVATE_KEY"]
     )
     ee.Initialize(credentials)
+
+init_ee()
 
 # ─────────────────────────────────────────────
 # SIDEBAR CONTROLS
