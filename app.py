@@ -28,14 +28,11 @@ st.set_page_config(
 # ─────────────────────────────────────────────
 @st.cache_resource
 def init_ee():
-    project = os.environ.get("EE_PROJECT", "ee-evanomondi")
-    try:
-        ee.Initialize(project=project)
-    except Exception:
-        ee.Authenticate()
-        ee.Initialize(project=project)
-
-init_ee()
+    credentials = ee.ServiceAccountCredentials(
+        email=st.secrets[108990589189516904072],
+        key_data=st.secrets[917fca061c33c396fd0e1e3fe41aed7c8a46060c]
+    )
+    ee.Initialize(credentials)
 
 # ─────────────────────────────────────────────
 # SIDEBAR CONTROLS
