@@ -26,8 +26,8 @@ st.set_page_config(
 @st.cache_resource
 def init_ee():
     credentials = ee.ServiceAccountCredentials(
-        email=st.secrets["geospatial-service-account@ee-evanomondi.iam.gserviceaccount.com"],
-        key_data=st.secrets["-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDATLBrAM+pzPSF\n2G7wg1yaKWQPNQEqEyOl2p31bdDTlks+fHES01YAoZAgDmfj9zeVt+vn8EuDL2Nl\nG3Bt41904M6b11blGEqhhY066GjvVf3xPjusEoHxNVSJCygorVbJzjYgMhkC0F+i\n5GnEVoPxu5aeJyAkttOvi1mSAleXMw9VNpLEqaSZcIjiFCj8mi28nDFwFlMcLFTa\nA4WcH6V3Jy28CRPZj93GhwJgLpbwQqRgO5Uy4LXk7iKygT8N1jxgN/ZUaDsrZ9Pc\nmO8KDfLXRl8Um1TdlgsIQ9X4EW+SLjcrIfpKKMJ+opGr5o8/q5wpbDjJQpjsMPSi\n6dUENPwpAgMBAAECggEAA5ytJ6VhQTA/W5BALTZac+7ZGUwGlJK9da0QkH6akI7f\nJPJTcWYU1Hg0a9W5b9fB7IcC4F1sHa+zLz//saC2t0xNtTGrSSxWoogOqg+ZgP1d\ngr2Hg2jple1JhDV4cKMo4SuFar9mJt5hHX8q2WxCmDTM1HWprebdPQviB9MRcB6W\nCnsSKeyfIHfZjk14AGZzYLi5YYQ5e0ZkGbNID3PwvflO6VRCDMr/2dv7NL2v6h36\n7geXAhVZdzJxO3BEulIaDDHHrlftDKK/s4DxL8HqQ5YRujF0WgFBT2CiZKMq6vvd\n4XbORkHPO9dO8ddBuZZ0uk/uRcyhIZz0O/nJMC3VfQKBgQDxvCRKr1SdjRkyceBq\nzYR4zL/d31RC4QuDW7bAfIcZnF4FbQ6NIjdMt49y9rBo7NahH8UcdDx2u2W1Dvnp\nBUT6kuu27wBP24N411alXb2B86JSIfc5dYTdhhrCZ6BrLyaYoUTE9NdIX5+LXttm\nnj34LbADVQYbmO+6Le5f8TaykwKBgQDLpbvX/ksI5rR/ynO7TLqqgMnL7MJFkrTO\n+pTGN+1alfCxo2Aj7JLeqEToeiboYxsbKk+TOUOjfmZw/a37cqm4RzLm/Kzha8z+\nbOXPPx0R9GqWkDzYWPe9s6qvEANOY7LMoxezIvloTyVh+xCn72BD9ByUwZ4+4vAn\nwUy8aYAf0wKBgQCspwvkq8VrodNVTDBVF+R9wv9moJO2ELYAZAjrAgYcLKqahYHX\nG5EToic6nSbySfYhrmdCI2LsCnxiDQhBfhn+PeFNDvbSEp6cOHESOxmXL0PIFapV\nx7HV5mpGX20cINkYOla7tYPtlR6GlIFvkaYBE+CbAKcUHu9ZsmSG8el3MQKBgE4r\nO8NY9Oxhwf8bcvj+JtizvsHsC1YxTf306Y58gTs4Or+0+n5PnMCiznB+Etk40XrH\n7uuQG4pyRlgwx8uw47y8d6l6a9HLU1CF9GBs1XfC3fcVPoW9ALtsb6Pq/ZnlYwhx\nwfMdBacoWi0V9frAQ69R0Ha5K0jwS0a3SAE6bdfJAoGBAIWTonXlHtc1RN0dUI+B\nIX+uxG18Er3R9FttkcmzA+oDbh5JGaK0pASLwKpNBaTJZ+hzzUx8IZX4qs8KOEdt\nSUjhjTpSFAMC8EOk2Fyv0j1lNrLt0LTQuDhXz3DtsOanOq8U4dy9M9GSi6sCGLMo\nxYZ1afQMbZQnaZDOZrIsmIjs\n-----END PRIVATE KEY-----\n"]
+        email=st.secrets["EE_SERVICE_ACCOUNT"],
+        key_data=st.secrets["EE_PRIVATE_KEY"]
     )
     ee.Initialize(credentials)
 
